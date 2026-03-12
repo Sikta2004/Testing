@@ -41,7 +41,7 @@ public class Cart extends baseClass {
 		        Response res = given()
 				.relaxedHTTPSValidation()
 				.contentType("application/json")
-				.auth().oauth2(jwtToken)
+				.auth().oauth2(jwtToken)                                            
 				.pathParam("shopperId", shopperId)
 				.body(add)
 				.when().post("https://www.shoppersstack.com/shopping/shoppers/{shopperId}/carts");
